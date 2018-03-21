@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <header>
       <div class="collapse bg-dark" id="navbarHeader">
         <div class="container">
@@ -12,7 +16,7 @@
                 <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                   <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                      <a class="nav-link" href="visualisation.php ">Visualisation <span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="visualisation.php">Visualisation <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="historique.php">Historique des bassins</a>
@@ -25,9 +29,15 @@
                       </div>
                     </li>
                     <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Connecté en tant que</a>
+                      <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Connecté en tant que<?php ".$_SESSION['u_id']."?></a>
                       <div class="dropdown-menu" aria-labelledby="dropdown01">
-                        <a class="dropdown-item" href="#">Déconnexion</a>
+                        <?php
+                          if (isset($_SESSION['u_id'])) {
+                            echo '<form action="includes/logout.inc.php" method="POST">
+                                  <a class="dropdown-item" href="#">Déconnexion</a>
+                                  </form>';
+                          }
+                        ?>
                       </div>
                     </li>
                   </ul>
