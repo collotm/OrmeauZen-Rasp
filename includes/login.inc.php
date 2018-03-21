@@ -22,7 +22,7 @@ if (isset($_POST['submit'])) {
 		$resultCheck = mysqli_num_rows($result);
 		#third if
 		if ($resultCheck < 1) {
-			header("Location: ../signin.php?login=error");
+			header("Location: ../signin.php?login=error2");
 			exit();
 		}/*third else*/ else {
 			#forth if
@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) {
 				$hashedPwdCheck = password_verify($pwd , $row['user_pwd']);
 				#fifth if
 				if ($hashedPwdCheck == false) {
-					header("Location: ../signin.php?login=error");
+					header("Location: ../signin.php?login=error3");
 					exit();
 				} /*fifth else*/ elseif ($hashedPwdCheck == true) {
 					//Log in the user here
@@ -47,6 +47,6 @@ if (isset($_POST['submit'])) {
 		}
 	}
 }/*first else*/ else {
-	header("Location: ../signin.php?login=error");
+	header("Location: ../signin.php?login=error1");
 	exit();
 }
