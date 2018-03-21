@@ -1,4 +1,8 @@
-<!doctype html>
+<?php
+  session_start();
+?>
+
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -27,6 +31,12 @@
           <h1>Visualisation des bassins</h1>
           <p class="lead text-muted"></p>
           <p class="lead">Aujourd'hui nous sommes le <?php echo date('d/m/Y'); ?></p>
+          <p class="lead"><?php
+                              if (isset($_SESSION['u_id'])) {
+                                echo "Vous êtes bien connecté !";
+                              }
+                          ?>
+          </p>
         </div>
       </section>
 
