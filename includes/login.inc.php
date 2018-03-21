@@ -7,14 +7,14 @@ if (isset($_POST['submit'])) {
 	
 	include 'dbh.inc.php';
 
-	$uid = mysqli_real_escape_string( $conn , $_POST['uid'] );
-	$pwd = mysqli_real_escape_string( $conn , $_POST['pwd'] );
+	$uid = mysqli_real_escape_string( $conn, $_POST['uid'] );
+	$pwd = mysqli_real_escape_string( $conn, $_POST['pwd'] );
 
 	//Error handerlers
 	//Check if this input are empty
 	#second if
 	if (empty($uid) || empty($pwd)) {
-		header("Location: ../index.php?login=empty");
+		header("Location: ../signin.php?login=empty");
 		exit();
 	}/*second else*/ else {
 		$sql = "SELECT * FROM users WHERE user_uid='$uid' OR user_email='$uid'";
@@ -22,7 +22,7 @@ if (isset($_POST['submit'])) {
 		$resultCheck = mysqli_num_rows($result);
 		#third if
 		if ($resultCheck < 1) {
-			header("Location: ../index.php?login=error");
+			header("Location: ../signin.php?login=error");
 			exit();
 		}/*third else*/ else {
 			#forth if
@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) {
 				$hashedPwdCheck = password_verify($pwd , $row['user_pwd']);
 				#fifth if
 				if ($hashedPwdCheck == false) {
-					header("Location: ../index.php?login=error");
+					header("Location: ../signin.php?login=error");
 					exit();
 				} /*fifth else*/ elseif ($hashedPwdCheck == true) {
 					//Log in the user here
@@ -40,13 +40,13 @@ if (isset($_POST['submit'])) {
 					$_SESSION['u_last'] = $row['user_last'];
 					$_SESSION['u_email'] = $row['user_email'];
 					$_SESSION['u_uid'] = $row['user_uid'];
-					header("Location: ../index.php?login=success");
+					header("Location: ../visualisation.php?login=success");
 					exit();
 				}
 			}
 		}
 	}
 }/*first else*/ else {
-	header("Location: ../index.php?login=error");
+	header("Location: ../signin.php?login=error");
 	exit();
 }

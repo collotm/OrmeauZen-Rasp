@@ -27,7 +27,6 @@
       <input type="text" id="inputPassword" name="uid" class="form-control" placeholder="Identifiant" required>
       <input type="password" id="inputPassword" name="pwd" class="form-control" placeholder="Mot de passe" required>
       <button class="btn btn-lg btn-primary btn-block" type="submit" name="submit">Inscription</button>
-      <a class="btn btn-lg btn-primary btn-block" href="signin.php">Vers la page de connexion</a>
       <p class="mt-5 mb-3 text-muted">&copy; OrmeauZen 2017-2018</p>
     </form>
   </body>

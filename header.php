@@ -29,14 +29,12 @@ session_start();
                       </div>
                     </li>
                     <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Connecté en tant que<?php ".$_SESSION['u_id']."?></a>
+                      <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Connecté en tant que<?php '.$_SESSION["u_id"].'?></a>
                       <div class="dropdown-menu" aria-labelledby="dropdown01">
                         <?php
-                          if (isset($_SESSION['u_id'])) {
                             echo '<form action="includes/logout.inc.php" method="POST">
                                   <a class="dropdown-item" href="#">Déconnexion</a>
                                   </form>';
-                          }
                         ?>
                       </div>
                     </li>
