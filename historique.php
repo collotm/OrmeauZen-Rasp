@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <?php
 if(isset($_GET["bassin"]))
   $bassin=$_GET["bassin"];
