@@ -20,7 +20,7 @@
   <body class="text-center">
     <form class="form-signin" action="includes/signup.inc.php" method="POST">
       <img class="mb-4" src="images/frah.jpg" alt="">
-      <h1 class="h3 mb-3 font-weight-normal">Inscription à OrmeauZen v2.0</h1>
+      <h1 class="h3 mb-3 font-weight-normal">Gestion des utilisateurs OrmeauZen v2.0</h1>
       <input type="text" id="inputEmail" name="first" class="form-control" placeholder="Nom" required autofocus>
       <input type="text" id="inputPassword" name="last" class="form-control" placeholder="Prénom" required>
       <input type="text" id="inputEmail" name="email" class="form-control" placeholder="Adresse E-mail" required autofocus>

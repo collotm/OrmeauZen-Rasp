@@ -20,16 +20,14 @@
   <body class="text-center">
     <?php
     echo
-    '<form class="form-signin" action="includes/login.inc.php" method="POST">
+    '<form class="form-signin" action="includes/loginAdmin.inc.php" method="POST">
       <img class="mb-4" src="images/frah.jpg" alt="">
-      <h1 class="h3 mb-3 font-weight-normal">Connectez-vous à OrmeauZen v2.0</h1>
+      <h1 class="h3 mb-3 font-weight-normal">Connectez-vous à OrmeauZen v2.0 Administrateur</h1>
         <label for="inputEmail" class="sr-only">Mail Adress</label>
-        <input type="email" id="inputEmail" name="uid" class="form-control" placeholder="Adresse E-mail/Identifiant" required>
+        <input type="email" id="inputEmail" name="uid" class="form-control" placeholder="Adresse E-mail" required>
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="inputPassword" name="pwd" class="form-control" placeholder="Mot de passe" required>
-        <button class="btn btn-lg btn-primary btn-block" type="submit" name="submit">Accédez à votre compte</button>
-        <h1 class="h3 mb-3 font-weight-normal">ou</h1>
-        <a class="btn btn-lg btn-primary btn-block" href="signinAdmin.php">Administrateur</a>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" name="submit">Accédez au compte admin</button>
         <p class="mt-5 mb-3 text-muted">&copy; OrmeauZen 2017-2018</p>
     </form>';
     ?>
