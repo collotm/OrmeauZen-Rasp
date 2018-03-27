@@ -75,7 +75,7 @@
                         <p class="temp"><img src="images/temp.png" /></p>
                       </th>
                       <th>
-                        <p class="nbassin" align="center"><a href="historique.php?bassin='.$i.'">Bassin n°' .$i. '</a></p>
+                        <p class="nbassin" align="center"><a href="historique.php?bassin='<?php echo $donnees['num_bassin']; ?>'">Bassin n°<?php echo $donnees['num_bassin']; ?></a></p>
                       </th>
                       <th>
                         <p class="deb"><img src="images/deb.png" /></p>
