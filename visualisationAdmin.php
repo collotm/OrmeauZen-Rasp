@@ -45,10 +45,27 @@
         <div class="container">
 
           <div class="row">
-           <?php
+          <?php
+            try
+            {
+              // On se connecte à MySQL
+              $conn = new PDO('mysql:host=localhost;dbname=ormeaux;charset=utf8', 'root', 'btsir123');
+            }
+            catch(Exception $e)
+            {
+              // En cas d'erreur, on affiche un message et on arrête tout
+                    die('Erreur : '.$e->getMessage());
+            }
 
-              for($i=1 ; $i<61 ; $i++){
-              echo '
+            // Si tout va bien, on peut continuer
+
+            // On récupère tout le contenu de la table jeux_video
+            $reponse = $conn->query('SELECT * FROM bassin1');
+
+            // On affiche chaque entrée une à une
+            while ($donnees = $reponse->fetch())
+            {
+          ?>
             <div class="col-md-3">
               <div class="card mb-5 box-shadow">
                 <div class="card-body">
@@ -66,26 +83,26 @@
                     </tr>
 
                     <tr>
-                      <td class="valeur" aligne="center">
-                        #valeur
+                      <td class="valeur" align="center">
+                        <?php echo $donnees['capt_temp']; ?>
                       </td>
                       <td>
                         <p></p>
                       </td>
                       <td class="valeur" align="center">
-                        #valeur
+                        <?php echo $donnees['capt_debit']; ?>
                       </td>  
                     </tr>
 
                     <tr>
-                      <td>
-                        <p>&nbsp;</p>
+                      <td align="center">
+                        <p>°C</p>
                       </td>
                       <td>
                         <p>&nbsp;</p>
                       </td>
-                      <td>
-                        <p>&nbsp;</p>
+                      <td align="center">
+                        <p>L/h</p>
                       </td>  
                     </tr>
 
@@ -103,8 +120,10 @@
                   </table>
                 </div>
               </div>
-            </div>';
+            </div>
+            <?php
             }
+            $reponse->closeCursor(); // Termine le traitement de la requête
             ?>
            </div> 
         </div>
