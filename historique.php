@@ -59,7 +59,7 @@ else
             while ($donnees = $reponse->fetch())
             {
           ?>
-            <table>
+            <table frame="border" rules="all" cellpadding="5">
               <tr>
                 <td>N° relevé</td>
                 <td>Heure</td>
