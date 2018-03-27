@@ -37,8 +37,63 @@ else
           <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
         </div>
       </section>
+      <div class="row">
+          <?php
+            try
+            {
+              // On se connecte à MySQL
+              $conn = new PDO('mysql:host=localhost;dbname=ormeaux;charset=utf8', 'root', 'btsir123');
+            }
+            catch(Exception $e)
+            {
+              // En cas d'erreur, on affiche un message et on arrête tout
+                    die('Erreur : '.$e->getMessage());
+            }
+
+            // Si tout va bien, on peut continuer
+
+            // On récupère tout le contenu de la table jeux_video
+            $reponse = $conn->query('SELECT * FROM bassin1');
+
+            // On affiche chaque entrée une à une
+            while ($donnees = $reponse->fetch())
+            {
+          ?>
+            <table>
+              <tr>
+                <td>N° relevé</td>
+                <td>Heure</td>
+                <td>Température</td>
+                <td>Débit</td>
+              </tr>
+                <tr>
+                <td><?php echo $donnees['id_valeur']; ?></td>
+                <td><?php echo $donnees['capt_time']; ?></td>
+                <td><?php echo $donnees['capt_temp']; ?></td>
+                <td><?php echo $donnees['capt_debit']; ?></td>
+              </tr>
+            </table>
+            <?php
+            }
+            $reponse->closeCursor(); // Termine le traitement de la requête
+            ?>
+           </div>
 
     </main><!-- /.container -->
+<table>
+  <tr>
+    <td>N° relevé</td>
+    <td>Heure</td>
+    <td>Température</td>
+    <td>Débit</td>
+  </tr>
+    <tr>
+    <td><?php echo $donnees['id_valeur']; ?></td>
+    <td><?php echo $donnees['capt_time']; ?></td>
+    <td><?php echo $donnees['capt_temp']; ?></td>
+    <td><?php echo $donnees['capt_debit']; ?></td>
+  </tr>
+</table>
 
 <?php require_once("footer.php"); ?>
 
