@@ -53,7 +53,7 @@ else
             // Si tout va bien, on peut continuer
 
             // On récupère tout le contenu de la table jeux_video
-            $reponse = $conn->query('SELECT * FROM bassin1');
+            $reponse = $conn->query('SELECT * FROM mesure');
 
             // On affiche chaque entrée une à une
             while ($donnees = $reponse->fetch())
@@ -68,9 +68,9 @@ else
               </tr>
                 <tr>
                 <td><?php echo $donnees['id_valeur']; ?></td>
-                <td><?php echo $donnees['capt_time']; ?></td>
-                <td><?php echo $donnees['capt_temp']; ?></td>
-                <td><?php echo $donnees['capt_debit']; ?></td>
+                <td><?php echo $donnees['datetime']; ?></td>
+                <td><?php echo $donnees['temp']; ?></td>
+                <td><?php echo $donnees['debit']; ?></td>
               </tr>
             </table>
             <?php
@@ -78,22 +78,9 @@ else
             $reponse->closeCursor(); // Termine le traitement de la requête
             ?>
            </div>
-
+           
     </main><!-- /.container -->
-<table>
-  <tr>
-    <td>N° relevé</td>
-    <td>Heure</td>
-    <td>Température</td>
-    <td>Débit</td>
-  </tr>
-    <tr>
-    <td><?php echo $donnees['id_valeur']; ?></td>
-    <td><?php echo $donnees['capt_time']; ?></td>
-    <td><?php echo $donnees['capt_temp']; ?></td>
-    <td><?php echo $donnees['capt_debit']; ?></td>
-  </tr>
-</table>
+
 
 <?php require_once("footer.php"); ?>
 
