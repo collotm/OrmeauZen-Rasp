@@ -18,8 +18,8 @@
 
                 <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                   <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="visualisation.php">Visualisation <span class="sr-only">(current)</span></a>
+                    <li class="nav-item">
+                      <a class="nav-link" href="visualisation.php">Visualisation</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="historique.php">Historique des bassins</a>

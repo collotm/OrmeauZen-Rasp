@@ -37,6 +37,8 @@ else
           <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
         </div>
       </section>
+
+
       <div class="row">
           <?php
             try
@@ -52,14 +54,14 @@ else
 
             // Si tout va bien, on peut continuer
 
-            // On récupère tout le contenu de la table jeux_video
+            // On récupère tout le contenu de la table mesure
             $reponse = $conn->query('SELECT * FROM mesure');
 
             // On affiche chaque entrée une à une
             while ($donnees = $reponse->fetch())
             {
           ?>
-            <table frame="border" rules="all" cellpadding="5">
+            <table frame="border" rules="all" cellpadding="5" align="center">
               <tr>
                 <td>N° relevé</td>
                 <td>Heure</td>
