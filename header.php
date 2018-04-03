@@ -24,6 +24,9 @@
                     <li class="nav-item">
                       <a class="nav-link" href="historique.php">Historique des bassins</a>
                     </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="signinAdmin.php">Gestion des utilisateurs</a>
+                    </li>                    
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Autre</a>
                       <div class="dropdown-menu" aria-labelledby="dropdown01">

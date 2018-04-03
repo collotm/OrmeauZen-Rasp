@@ -11,9 +11,9 @@
 </head>
 <body>
 	<div class="container">
-		<div class="row">
-			<div class="col-sm-6 col-md-6">
-				<div id="container1"></div>
+		<div>
+			<div>
+				<div id="container2"></div>
 			</div>
 			<div class="col-sm-6 col-md-6"></div>
 			<div class="col-sm-6 col-md-6"></div>
@@ -27,7 +27,7 @@
 		    'https://cdn.rawgit.com/highcharts/highcharts/057b672172ccc6c08fe7dbb27fc17ebca3f5b770/samples/data/usdeur.json',
 		    function (data) {
 
-		        Highcharts.chart('container1', {
+		        Highcharts.chart('container2', {
 		            chart: {
 		                zoomType: 'x'
 		            },
@@ -36,7 +36,7 @@
 		            },
 		            subtitle: {
 		                text: document.ontouchstart === undefined ?
-		                        'Click and drag in the plot area to zoom in' : 'Pinch the chart to zoom in'
+		                        'Choisir la zone pour zoomer' : 'Pinch the chart to zoom in'
 		            },
 		            xAxis: {
 		                type: 'datetime'
@@ -78,7 +78,7 @@
 
 		            series: [{
 		                type: 'area',
-		                name: 'USD to EUR',
+		                name: 'Débit',
 		                data: data
 		            }]
 		        });

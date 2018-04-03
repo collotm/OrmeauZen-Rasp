@@ -13,7 +13,11 @@ else
     <meta name="author" content="">
     <link rel="icon" href="images/iconf.ico">
 
-    <title>Historique des bassins</title>
+    <title>
+      <?php
+        echo 'Historique du bassin n°'.$bassin.'';
+      ?>
+    </title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap4/dist/css/bootstrap.css" rel="stylesheet">
@@ -26,63 +30,33 @@ else
 
 <?php require_once("header.php"); ?>
 
-    <main role="main" class="container">
+    <main role="main">
 
       <section class="starter-template">
         <div class="container">
           <?php
-          echo '<h1>Historique du bassin n° '.$bassin.'</h1>';
+          echo '<h1>Historique du bassin n°'.$bassin.'</h1>';
           ?>
           <p class="lead text-muted"></p>
-          <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+          <p class="lead">Aujourd'hui nous sommes le <?php echo date('d/m/Y'); ?></p>
+          <p class="lead">
+            <?php
+              if (isset($_SESSION['u_id'])) {
+                echo "Vous êtes bien connecté sur la session administrateur !";
+              }
+            ?>
+          </p>
         </div>
       </section>
 
+      <div class="album py-5 bg-light">
+        <?php require_once("graph/graphtemp.php"); ?>
+        <p>&nbsp;</p>
+        <?php require_once("graph/graphdeb.php"); ?>          
+      </div>
 
-      <div class="row">
-          <?php
-            try
-            {
-              // On se connecte à MySQL
-              $conn = new PDO('mysql:host=localhost;dbname=ormeaux;charset=utf8', 'root', 'btsir123');
-            }
-            catch(Exception $e)
-            {
-              // En cas d'erreur, on affiche un message et on arrête tout
-                    die('Erreur : '.$e->getMessage());
-            }
 
-            // Si tout va bien, on peut continuer
-
-            // On récupère tout le contenu de la table mesure
-            $reponse = $conn->query('SELECT * FROM mesure');
-
-            // On affiche chaque entrée une à une
-            while ($donnees = $reponse->fetch())
-            {
-          ?>
-            <table frame="border" rules="all" cellpadding="5" align="center">
-              <tr>
-                <td>N° relevé</td>
-                <td>Heure</td>
-                <td>Température</td>
-                <td>Débit</td>
-              </tr>
-                <tr>
-                <td><?php echo $donnees['id_valeur']; ?></td>
-                <td><?php echo $donnees['datetime']; ?></td>
-                <td><?php echo $donnees['temp']; ?></td>
-                <td><?php echo $donnees['debit']; ?></td>
-              </tr>
-            </table>
-            <?php
-            }
-            $reponse->closeCursor(); // Termine le traitement de la requête
-            ?>
-           </div>
-           
-    </main><!-- /.container -->
-
+    </main>
 
 <?php require_once("footer.php"); ?>
 
@@ -93,6 +67,6 @@ else
     <script>window.jQuery || document.write('<script src="bootstrap4/dist/js/vendor/jquery-slim.min.js"><\/script>')</script>
     <script src="bootstrap4/dist/js/vendor/popper.min.js"></script>
     <script src="bootstrap4/dist/js/bootstrap.min.js"></script>
-    <script src="bootstrap4/dist/js/vendor/holder.min.js"></script>    
+    <script src="bootstrap4/dist/js/vendor/holder.min.js"></script>
   </body>
 </html>
