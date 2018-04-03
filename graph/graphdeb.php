@@ -60,7 +60,7 @@
 		                        },
 		                        stops: [
 		                            [0, Highcharts.getOptions().colors[5]],
-		                            [1, Highcharts.Color(Highcharts.getOptions().colors[2]).setOpacity(0.5).get('rgba')]
+		                            [1, Highcharts.Color(Highcharts.getOptions().colors[2]).setOpacity(0.25).get('rgba')]
 		                        ]
 		                    },
 		                    marker: {
