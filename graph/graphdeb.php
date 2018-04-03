@@ -59,8 +59,8 @@
 		                            y2: 1
 		                        },
 		                        stops: [
-		                            [0, Highcharts.getOptions().colors[0]],
-		                            [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+		                            [0, Highcharts.getOptions().colors[5]],
+		                            [1, Highcharts.Color(Highcharts.getOptions().colors[2]).setOpacity(0.5).get('rgba')]
 		                        ]
 		                    },
 		                    marker: {
