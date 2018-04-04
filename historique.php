@@ -13,11 +13,7 @@ else
     <meta name="author" content="">
     <link rel="icon" href="images/iconf.ico">
 
-    <title>
-      <?php
-        echo 'Historique du bassin n°'.$bassin.'';
-      ?>
-    </title>
+    <title>Historique du bassin n°<?php echo $bassin; ?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap4/dist/css/bootstrap.css" rel="stylesheet">
@@ -34,15 +30,13 @@ else
 
       <section class="starter-template">
         <div class="container">
-          <?php
-          echo '<h1>Historique du bassin n°'.$bassin.'</h1>';
-          ?>
+          <h1>Historique du Bassin n°<?php echo $donnees['id_bassin']; ?> </h1>
           <p class="lead text-muted"></p>
           <p class="lead">Aujourd'hui nous sommes le <?php echo date('d/m/Y'); ?></p>
           <p class="lead">
             <?php
               if (isset($_SESSION['u_id'])) {
-                echo "Vous êtes bien connecté sur la session administrateur !";
+                echo "Vous êtes bien connecté !";
               }
             ?>
           </p>

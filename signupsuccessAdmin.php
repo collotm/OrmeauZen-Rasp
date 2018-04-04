@@ -21,7 +21,7 @@
     <form class="form-signin" action="includes/signup.inc.php" method="POST">
       <img class="mb-4" src="images/frah.jpg" alt="">
       <h1 class="h3 mb-3 font-weight-normal">Inscription réussie</h1>
-      <a class="btn btn-lg btn-primary btn-block" href="visualisationAdmin.php">Retour à la visualisation</a>
+      <a class="btn btn-lg btn-primary btn-block" href="visualisation.php">Retour à la visualisation</a>
       <h1 class="h3 mb-3 font-weight-normal">ou</h1>
       <a class="btn btn-lg btn-primary btn-block" href="signupAdmin.php">Nouvelle inscription</a>
       <p class="mt-5 mb-3 text-muted">&copy; OrmeauZen 2017-2018</p>

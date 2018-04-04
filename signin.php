@@ -28,8 +28,6 @@
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="inputPassword" name="pwd" class="form-control" placeholder="Mot de passe" required>
         <button class="btn btn-lg btn-primary btn-block" type="submit" name="submit">Accédez à votre compte</button>
-        <h1 class="h3 mb-3 font-weight-normal">ou</h1>
-        <a class="btn btn-lg btn-primary btn-block" href="signinAdmin.php">Administrateur</a>
         <p class="mt-5 mb-3 text-muted">&copy; OrmeauZen 2017-2018</p>
     </form>';
     ?>
