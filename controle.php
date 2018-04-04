@@ -20,32 +20,72 @@
 
     <main role="main">
 
-        <div class="container">
+        <div class="container" align="center">
           <div class="row">
+
+    	<!-- Temp only !!! -->
             <div class="col-md-3">
               <div class="card mb-5 box-shadow">
                 <div class="card-body">
                   <table>
-
                     <tr> 
+                      <th width="200">
+                        <p></p>
+                      </th>
                       <th>
                         <p class="temp"><img src="images/temp.png" /></p>
                       </th>
-                      <th>
-                        <p class="nbassin" align="center"><a href="historique.php?bassin=''">Bassin n°</a></p>
-                      </th>
-                      <th>
-                        <p class="deb"><img src="images/deb.png" /></p>
+                      <th width="200">
+                        <p></p>
                       </th>
                     </tr>
 
                     <tr>
+                      <th width="200" height="40">
+                        <p></p>
+                      </th> 
+                      <td class="valeur" align="center">
+                      </td>
+                      <th width="200"  height="40">
+                        <p></p>
+                      </th> 
+                    </tr>
+
+                    <tr>
+                      <th width="200">
+                        <p></p>
+                      </th>
                       <td align="center">
+                        <p>°C</p>
+                      </td>
+                      <th width="200">
+                        <p></p>
+                      </th> 
+                    </tr>
+
+                  </table>
+                </div>
+              </div>
+            </div>
+
+    	<!-- Control only !!! -->
+            <div class="col-md-3" align="center">
+              <div class="card mb-5 box-shadow">
+                <div class="card-body">
+                  <table>
+                    <tr>
+                      <td colspan="3" align="center">
+                        <p>Veuillez entrer le débit désiré</p>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td  width="200" align="center">
                         <button type="button" class="btn btn-sm btn-outline-secondary">-</button>
                       </td>
                       <td class="valeur" align="center">
                       </td>
-                      <td align="center">
+                      <td  width="200" align="center">
                         <button type="button" class="btn btn-sm btn-outline-secondary">+</button>
                       </td>
                     </tr>
@@ -55,7 +95,7 @@
                         <p>&nbsp;</p>
                       </td>
                       <td align="center">
-                      	<p>&nbsp;</p>
+                      	<p>L/h</p>
                       </td>
                       <td align="center">
                         <p>&nbsp;</p>
@@ -63,15 +103,15 @@
                     </tr>
 
                     <tr>
-                      <td align="center">
+                      <th width="200">
                         <p></p>
-                      </td>
+                      </th>
                       <td align="center">
-        				<button class="btn btn-lg btn-primary btn-block" type="submit" name="submit">ok</button>
+        				<button class="btn btn-lg btn-primary btn-block" type="submit" name="submit">Ok</button>
                       </td>
-                      <td align="center">
-                       <p></p>
-                      </td>
+                      <th width="200">
+                        <p></p>
+                      </th>
                     </tr>                    
 
                   </table>
@@ -79,55 +119,96 @@
               </div>
             </div>
 
+    	<!-- Effective time only !!! -->
+            <div class="col-md-3" align="center">
+              <div class="card mb-5 box-shadow">
+                <div class="card-body">
+                  <table>
+                    <tr>
+                      <td colspan="3" align="center">
+                        <p>Prise en compte dans : X secondes</p>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td  width="200" align="center">
+                        <p></p>
+                      </td>
+                      <td class="valeur" align="center">
+                      </td>
+                      <td  width="200" align="center">
+                        <p></p>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td align="center">
+                        <p>&nbsp;</p>
+                      </td>
+                      <td align="center">
+                      	<p></p>
+                      </td>
+                      <td align="center">
+                        <p>&nbsp;</p>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th width="200">
+                        <p></p>
+                      </th>
+                      <td align="center">
+        				<button class="btn btn-lg btn-primary btn-block" type="submit" name="submit">Ok</button>
+                      </td>
+                      <th width="200">
+                        <p></p>
+                      </th>
+                    </tr>                    
+
+                  </table>
+                </div>
+              </div>
+            </div>
+
+    	<!-- Deb only !!! -->
             <div class="col-md-3">
               <div class="card mb-5 box-shadow">
                 <div class="card-body">
                   <table>
                     <tr> 
-                      <th>
-                        <p class="temp"><img src="images/temp.png" /></p>
+                      <th width="200">
+                        <p></p>
                       </th>
-                      <th>
-                        <p class="nbassin" align="center"><a href="historique.php?bassin=''">Bassin n°</a></p>
-                      </th>
-                      <th>
                         <p class="deb"><img src="images/deb.png" /></p>
                       </th>
-                    </tr>
-
-                    <tr>
-                      <td class="valeur" align="center">
-                      </td>
-                      <td>
+                      <th width="200">
                         <p></p>
-                      </td>
-                      <td class="valeur" align="center">
-                      </td>  
+                      </th>
                     </tr>
 
                     <tr>
-                      <td align="center">
-                        <p>°C</p>
+                      <th width="200" height="40">
+                        <p></p>
+                      </th> 
+                      <td class="valeur" align="center">
                       </td>
-                      <td>
-                        <p>&nbsp;</p>
-                      </td>
+                      <th width="200"  height="40">
+                        <p></p>
+                      </th> 
+                    </tr>
+
+                    <tr>
+                      <th width="200">
+                        <p></p>
+                      </th>
                       <td align="center">
                         <p>L/h</p>
-                      </td>  
+                      </td>
+                      <th width="200">
+                        <p></p>
+                      </th> 
                     </tr>
 
-                    <tr>
-                      <td align="center">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">-</button>
-                      </td>
-                      <td>
-                        <p class="card-text">Régl. débit</p>
-                      </td>
-                      <td align="center">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">+</button>
-                      </td>
-                    </tr>
                   </table>
                 </div>
               </div>

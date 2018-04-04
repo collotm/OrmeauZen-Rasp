@@ -50,6 +50,8 @@ else
       </section>
         
       <div class="album py-5 bg-light">
+        <?php require_once("controle.php"); ?>        
+        <p>&nbsp;</p>
         <hr width="75%" align=center>
         <p>&nbsp;</p>
         <?php require_once("graph/graphtemp.php"); ?>
