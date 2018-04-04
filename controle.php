@@ -1,7 +1,3 @@
-<?php
-  session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,7 +7,7 @@
     <meta name="author" content="">
     <link rel="icon" href="images/iconf.ico">
 
-    <title>Visualisation des bassins</title>
+    <title>controle</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap4/dist/css/bootstrap.css" rel="stylesheet">
@@ -22,50 +18,67 @@
 
   <body>
 
-<?php require_once("header.php"); ?>
-
     <main role="main">
 
-      <section class="starter-template">
         <div class="container">
-          <h1>Visualisation des bassins</h1>
-          <p class="lead text-muted"></p>
-          <p class="lead">Aujourd'hui nous sommes le <?php echo date('d/m/Y'); ?></p>
-          <p class="lead">
-            <?php
-              if (isset($_SESSION['u_id'])) {
-                echo "Vous êtes bien connecté !";
-              }
-            ?>
-          </p>
-        </div>
-      </section>
-
-      <div class="album py-5 bg-light">
-        <div class="container">
-          
           <div class="row">
-          <?php
-            try
-            {
-              // On se connecte à MySQL
-              $conn = new PDO('mysql:host=localhost;dbname=ormeaux;charset=utf8', 'root', 'btsir123');
-            }
-            catch(Exception $e)
-            {
-              // En cas d'erreur, on affiche un message et on arrête tout
-                    die('Erreur : '.$e->getMessage());
-            }
+            <div class="col-md-3">
+              <div class="card mb-5 box-shadow">
+                <div class="card-body">
+                  <table>
 
-            // Si tout va bien, on peut continuer
+                    <tr> 
+                      <th>
+                        <p class="temp"><img src="images/temp.png" /></p>
+                      </th>
+                      <th>
+                        <p class="nbassin" align="center"><a href="historique.php?bassin=''">Bassin n°</a></p>
+                      </th>
+                      <th>
+                        <p class="deb"><img src="images/deb.png" /></p>
+                      </th>
+                    </tr>
 
-            // On récupère tout le contenu de la table jeux_video
-            $reponse = $conn->query('SELECT * FROM mesure');
+                    <tr>
+                      <td align="center">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">-</button>
+                      </td>
+                      <td class="valeur" align="center">
+                      </td>
+                      <td align="center">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">+</button>
+                      </td>
+                    </tr>
 
-            // On affiche chaque entrée une à une
-            while ($donnees = $reponse->fetch())
-            {
-          ?>
+                    <tr>
+                      <td align="center">
+                        <p>&nbsp;</p>
+                      </td>
+                      <td align="center">
+                      	<p>&nbsp;</p>
+                      </td>
+                      <td align="center">
+                        <p>&nbsp;</p>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td align="center">
+                        <p></p>
+                      </td>
+                      <td align="center">
+        				<button class="btn btn-lg btn-primary btn-block" type="submit" name="submit">ok</button>
+                      </td>
+                      <td align="center">
+                       <p></p>
+                      </td>
+                    </tr>                    
+
+                  </table>
+                </div>
+              </div>
+            </div>
+
             <div class="col-md-3">
               <div class="card mb-5 box-shadow">
                 <div class="card-body">
@@ -75,7 +88,7 @@
                         <p class="temp"><img src="images/temp.png" /></p>
                       </th>
                       <th>
-                        <p class="nbassin" align="center"><a href="historique.php?bassin='<?php echo $donnees['id_bassin']; ?>'">Bassin n°<?php echo $donnees['id_bassin']; ?></a></p>
+                        <p class="nbassin" align="center"><a href="historique.php?bassin=''">Bassin n°</a></p>
                       </th>
                       <th>
                         <p class="deb"><img src="images/deb.png" /></p>
@@ -84,13 +97,11 @@
 
                     <tr>
                       <td class="valeur" align="center">
-                        <?php echo $donnees['temp']; ?>
                       </td>
                       <td>
                         <p></p>
                       </td>
                       <td class="valeur" align="center">
-                        <?php echo $donnees['debit']; ?>
                       </td>  
                     </tr>
 
@@ -121,17 +132,10 @@
                 </div>
               </div>
             </div>
-            <?php
-            }
-            $reponse->closeCursor(); // Termine le traitement de la requête
-            ?>
            </div> 
         </div>
-      </div>
 
     </main>
-
-<?php require_once("footer.php"); ?>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

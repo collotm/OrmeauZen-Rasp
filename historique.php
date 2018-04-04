@@ -48,11 +48,15 @@ else
           </p>
         </div>
       </section>
-
+        
       <div class="album py-5 bg-light">
+        <hr width="75%" align=center>
+        <p>&nbsp;</p>
         <?php require_once("graph/graphtemp.php"); ?>
         <p>&nbsp;</p>
-        <?php require_once("graph/graphdeb.php"); ?>          
+        <?php require_once("graph/graphdeb.php"); ?> 
+        <p>&nbsp;</p>
+        <hr width="75%" align=center>      
       </div>
 
 
