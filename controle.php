@@ -107,7 +107,7 @@
                         <p></p>
                       </th>
                       <td align="center">
-        				<button class="btn btn-lg btn-primary btn-block" type="submit" name="submit">Ok</button>
+        				        <button class="btn btn-lg btn-primary btn-block" type="submit" name="submit" href="supprMsg.php" onclick="return confirm('Voulez-vous vraiment changer le débit ?');">Ok</button>
                       </td>
                       <th width="200">
                         <p></p>

@@ -14,15 +14,15 @@ if (isset($_POST['submit'])) {
 	//Check if this input are empty
 	#second if
 	if (empty($uid) || empty($pwd)) {
-		header("Location: ../signin.php?login=empty");
+		header("Location: ../signinAdmin.php?login=empty");
 		exit();
 	}/*second else*/ else {
-		$sql = "SELECT * FROM users WHERE user_uid='$uid' OR user_email='$uid'";
+		$sql = "SELECT * FROM administrateur WHERE user_uid='$uid' OR user_email='$uid'";
 		$result = mysqli_query($conn,$sql);
 		$resultCheck = mysqli_num_rows($result);
 		#third if
 		if ($resultCheck < 1) {
-			header("Location: ../signin.php?login=error2");
+			header("Location: ../signinAdmin.php?login=error2");
 			exit();
 		}/*third else*/ else {
 			#forth if
@@ -47,6 +47,6 @@ if (isset($_POST['submit'])) {
 		}
 	}
 }/*first else*/ else {
-	header("Location: ../signin.php?login=error1");
+	header("Location: ../signinAdmin.php?login=error1");
 	exit();
 }

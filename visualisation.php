@@ -59,8 +59,8 @@
 
             // Si tout va bien, on peut continuer
 
-            // On récupère tout le contenu de la table jeux_video
-            $reponse = $conn->query('SELECT * FROM mesure');
+            // On récupère tout le contenu de la table mesure
+            $reponse = $conn->query('SELECT * FROM mesure WHERE id_bassin ="`.$donnees.`" ORDER BY datetime DESC LIMIT 1');
 
             // On affiche chaque entrée une à une
             while ($donnees = $reponse->fetch())
