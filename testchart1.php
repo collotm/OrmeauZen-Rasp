@@ -1,4 +1,5 @@
-https://www.amcharts.com/demos/line-chart-with-scroll-and-zoom/
+<!--https://www.amcharts.com/demos/line-chart-with-scroll-and-zoom/-->
+
 <!-- Styles -->
 <style>
 #chartdiv {
@@ -12,18 +13,21 @@ https://www.amcharts.com/demos/line-chart-with-scroll-and-zoom/
 <script src="https://www.amcharts.com/lib/3/serial.js"></script>
 <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
 <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
-<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>  
+<script src="http://www.amcharts.com/lib/3/plugins/dataloader/dataloader.min.js"></script>
+
 
 <!-- Chart code -->
 <script>
-var chartData = generateChartData();
 var chart = AmCharts.makeChart("chartdiv", {
     "type": "serial",
+    "dataLoader": {
+      "url": "data.php"
+    },
     "theme": "light",
     "marginRight": 80,
     "autoMarginOffset": 20,
     "marginTop": 7,
-    "dataProvider": chartData,
     "valueAxes": [{
         "axisAlpha": 0.2,
         "dashLength": 1,
@@ -38,7 +42,7 @@ var chart = AmCharts.makeChart("chartdiv", {
         "bulletColor": "#FFFFFF",
         "hideBulletsCount": 50,
         "title": "red line",
-        "valueField": "visits",
+        "valueField": "temp",
         "useLineColorForBulletBorder": true,
         "balloon":{
             "drop":true
@@ -52,7 +56,7 @@ var chart = AmCharts.makeChart("chartdiv", {
     "chartCursor": {
        "limitToGraph":"g1"
     },
-    "categoryField": "date",
+    "categoryField": "tstamp",
     "categoryAxis": {
         "parseDates": true,
         "axisColor": "#DADADA",
