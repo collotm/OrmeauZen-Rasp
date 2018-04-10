@@ -56,7 +56,7 @@ var chart = AmCharts.makeChart("chartdiv", {
     "chartCursor": {
        "limitToGraph":"g1"
     },
-    "categoryField": "tstamp",
+    "categoryField": "datetime",
     "categoryAxis": {
         "parseDates": true,
         "axisColor": "#DADADA",

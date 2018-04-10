@@ -1,15 +1,15 @@
 <?php
 // Connect to MySQL
-$link = new mysqli( 'localhost', 'root', 'root', 'ormeauzen' );
+$link = new mysqli( 'localhost', 'root', 'btsir123', 'ormeaux' );
 if ( $link->connect_errno ) {
   die( "Failed to connect to MySQL: (" . $link->connect_errno . ") " . $link->connect_error );
 }
 
 // Fetch the data
 $query = "
-  SELECT *
-  FROM data
-  ORDER BY tstamp ASC";
+	SELECT * FROM mesure 
+	WHERE id_bassin =1 
+	ORDER BY datetime";
 $result = $link->query( $query );
 
 // All good?
