@@ -60,7 +60,7 @@
             // Si tout va bien, on peut continuer
 
             // On récupère tout le contenu de la table mesure
-            $reponse = $conn->query('SELECT * FROM mesure WHERE id_bassin ="`.$donnees.`" ORDER BY datetime DESC LIMIT 1');
+            $reponse = $conn->query('SELECT * FROM bassin');
 
             // On affiche chaque entrée une à une
             while ($donnees = $reponse->fetch())
@@ -75,7 +75,7 @@
                         <p class="temp"><img src="images/temp.png" /></p>
                       </th>
                       <th>
-                        <p class="nbassin" align="center"><a href="historique.php?bassin='<?php echo $donnees['id_bassin']; ?>'">Bassin n°<?php echo $donnees['id_bassin']; ?></a></p>
+                        <p class="nbassin" align="center"><a href="historique.php?bassin='<?php echo $donnees['id']; ?>'">Bassin n° <?php echo $donnees['id']; ?></a></p>
                       </th>
                       <th>
                         <p class="deb"><img src="images/deb.png" /></p>
@@ -106,16 +106,8 @@
                       </td>  
                     </tr>
 
-                    <tr>
-                      <td align="center">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">-</button>
-                      </td>
-                      <td>
-                        <p class="card-text">Régl. débit</p>
-                      </td>
-                      <td align="center">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">+</button>
-                      </td>
+                    <tr align="center">
+                      <p align="center">Dernières valeurs relevées</p>
                     </tr>
                   </table>
                 </div>

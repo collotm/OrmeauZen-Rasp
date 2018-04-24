@@ -45,6 +45,7 @@
                         <p></p>
                       </th> 
                       <td class="valeur" align="center">
+                        <?php echo $donnees['temp']; ?>
                       </td>
                       <th width="200"  height="40">
                         <p></p>
@@ -66,6 +67,11 @@
                   </table>
                 </div>
               </div>
+            </div>
+
+      <!-- Space -->
+            <div class="col-md-3" align="center">
+              
             </div>
 
     	<!-- Control only !!! -->
@@ -108,57 +114,6 @@
                       </th>
                       <td align="center">
         				        <button class="btn btn-lg btn-primary btn-block" type="submit" name="submit" href="supprMsg.php" onclick="return confirm('Voulez-vous vraiment changer le débit ?');">Ok</button>
-                      </td>
-                      <th width="200">
-                        <p></p>
-                      </th>
-                    </tr>                    
-
-                  </table>
-                </div>
-              </div>
-            </div>
-
-    	<!-- Effective time only !!! -->
-            <div class="col-md-3" align="center">
-              <div class="card mb-5 box-shadow">
-                <div class="card-body">
-                  <table>
-                    <tr>
-                      <td colspan="3" align="center">
-                        <p>Prise en compte dans : X secondes</p>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td  width="200" align="center">
-                        <p></p>
-                      </td>
-                      <td class="valeur" align="center">
-                      </td>
-                      <td  width="200" align="center">
-                        <p></p>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td align="center">
-                        <p>&nbsp;</p>
-                      </td>
-                      <td align="center">
-                      	<p></p>
-                      </td>
-                      <td align="center">
-                        <p>&nbsp;</p>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <th width="200">
-                        <p></p>
-                      </th>
-                      <td align="center">
-        				<button class="btn btn-lg btn-primary btn-block" type="submit" name="submit">Ok</button>
                       </td>
                       <th width="200">
                         <p></p>

@@ -1,3 +1,8 @@
+<?php
+  session_start();
+?>
+
+
 <!DOCTYPE html>
 <?php
 if(isset($_GET["bassin"]))
@@ -30,7 +35,7 @@ else
 
       <section class="starter-template">
         <div class="container">
-          <h1>Historique du Bassin n°<?php echo $donnees['id_bassin']; ?> </h1>
+          <h1>Historique du Bassin n°<?php echo $donnees['id']; ?> </h1>
           <p class="lead text-muted"></p>
           <p class="lead">Aujourd'hui nous sommes le <?php echo date('d/m/Y'); ?></p>
           <p class="lead">
@@ -48,7 +53,9 @@ else
         <p>&nbsp;</p>
         <hr width="75%" align=center>
         <p>&nbsp;</p>
-        <?php require_once("graph/graphtemp.php"); ?>
+        <div>
+        	<?php require_once("chart/chart_temp.php"); ?>
+    	</div>
         <p>&nbsp;</p>
         <?php require_once("graph/graphdeb.php"); ?> 
         <p>&nbsp;</p>
