@@ -45,7 +45,7 @@
                         <p></p>
                       </th> 
                       <td class="valeur" align="center">
-                        <?php echo $donnees['temp']; ?>
+                        <?php echo $val_mesure['temp']; ?>
                       </td>
                       <th width="200"  height="40">
                         <p></p>
@@ -71,7 +71,7 @@
 
       <!-- Space -->
             <div class="col-md-3" align="center">
-              
+              <p><img src="images/bas.png" /></p>              
             </div>
 
     	<!-- Control only !!! -->
@@ -146,6 +146,7 @@
                         <p></p>
                       </th> 
                       <td class="valeur" align="center">
+                        <?php echo $val_mesure['deb']; ?>
                       </td>
                       <th width="200"  height="40">
                         <p></p>

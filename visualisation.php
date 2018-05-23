@@ -65,6 +65,10 @@
             // On affiche chaque entrée une à une
             while ($donnees = $reponse->fetch())
             {
+
+              $mesure = $conn->query("SELECT * FROM mesure WHERE id_bassin=$donnees[id] ORDER BY datetime DESC LIMIT 1");
+              $val_mesure =  $mesure->fetch();
+
           ?>
             <div class="col-md-3">
               <div class="card mb-5 box-shadow">
@@ -75,7 +79,7 @@
                         <p class="temp"><img src="images/temp.png" /></p>
                       </th>
                       <th>
-                        <p class="nbassin" align="center"><a href="historique.php?bassin='<?php echo $donnees['id']; ?>'">Bassin n° <?php echo $donnees['id']; ?></a></p>
+                        <p class="nbassin" align="center"><a href="historique.php?bassin=<?php echo $donnees['id']; ?>">Bassin n° <?php echo $donnees['id']; ?></a></p>
                       </th>
                       <th>
                         <p class="deb"><img src="images/deb.png" /></p>
@@ -84,13 +88,13 @@
 
                     <tr>
                       <td class="valeur" align="center">
-                        <?php echo $donnees['temp']; ?>
+                        <?php echo $val_mesure['temp']; ?>
                       </td>
                       <td>
                         <p></p>
                       </td>
                       <td class="valeur" align="center">
-                        <?php echo $donnees['debit']; ?>
+                        <?php echo $val_mesure['debit']; ?>
                       </td>  
                     </tr>
 

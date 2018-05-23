@@ -5,7 +5,7 @@
 <head>
     <title>Débit</title>
         <!-- Resources -->
-        <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+        <script src="amcharts.js"></script>
         <script src="serial.js"></script>
         <script src="export.min.js"></script>
         <link rel="stylesheet" href="export.css" type="text/css" media="all" />

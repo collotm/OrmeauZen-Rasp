@@ -18,7 +18,7 @@ else
     <meta name="author" content="">
     <link rel="icon" href="images/iconf.ico">
 
-    <title>Historique du bassin n°<?php echo $bassin; ?></title>
+    <title>Historique du bassin n° <?php echo $bassin; ?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap4/dist/css/bootstrap.css" rel="stylesheet">
@@ -35,7 +35,7 @@ else
 
       <section class="starter-template">
         <div class="container">
-          <h1>Historique du Bassin n°<?php echo $donnees['id']; ?> </h1>
+          <h1>Historique du Bassin n° <?php echo $bassin; ?> </h1>
           <p class="lead text-muted"></p>
           <p class="lead">Aujourd'hui nous sommes le <?php echo date('d/m/Y'); ?></p>
           <p class="lead">
@@ -57,7 +57,7 @@ else
         	<?php require_once("chart/chart_temp.php"); ?>
     	</div>
         <p>&nbsp;</p>
-        <?php require_once("graph/graphdeb.php"); ?> 
+        <?php require_once("chart/chart_deb.php"); ?> 
         <p>&nbsp;</p>
         <hr width="75%" align=center>      
       </div>
