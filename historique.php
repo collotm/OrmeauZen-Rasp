@@ -18,7 +18,7 @@ else
     <meta name="author" content="">
     <link rel="icon" href="images/iconf.ico">
 
-    <title>Historique du bassin n°<?php echo $bassin; ?></title>
+    <title>Historique du bassin n° <?php echo $bassin; ?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap4/dist/css/bootstrap.css" rel="stylesheet">
@@ -46,7 +46,11 @@ else
 
       <section class="starter-template">
         <div class="container">
+<<<<<<< HEAD
           <h1>Historique du Bassin n°<?php echo $bassin; ?> </h1>
+=======
+          <h1>Historique du Bassin n° <?php echo $bassin; ?> </h1>
+>>>>>>> bcdfcd230a5e8d239f5fb28676245adc4a7c0b95
           <p class="lead text-muted"></p>
           <p class="lead">Aujourd'hui nous sommes le <?php echo date('d/m/Y'); ?></p>
           <p class="lead">
@@ -67,6 +71,7 @@ else
         <p>&nbsp;</p>
         <hr width="75%" align=center>
         <p>&nbsp;</p>
+<<<<<<< HEAD
         <div id="chartdiv" class="chartdiv">
           <?php require_once("chart/chart_temp.php"); ?>
         </div>
@@ -78,6 +83,13 @@ else
         </div> 
         <p>&nbsp;</p>
         <hr width="75%" align=center>
+=======
+        <div>
+        	<?php require_once("chart/chart_temp.php"); ?>
+    	</div>
+        <p>&nbsp;</p>
+        <?php require_once("chart/chart_deb.php"); ?> 
+>>>>>>> bcdfcd230a5e8d239f5fb28676245adc4a7c0b95
         <p>&nbsp;</p>
         <div align="center">
           <?php require_once("tableau.php"); ?>

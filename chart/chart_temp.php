@@ -1,5 +1,25 @@
 <!--https://www.amcharts.com/demos/area-with-time-based-data/-->
 
+<<<<<<< HEAD
+=======
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temperature</title>
+        <!-- Resources -->
+        <script src="/OrmeauZen-Rasp/js/amcharts.js"></script>
+        <script src="/OrmeauZen-Rasp/js/serial.js"></script>
+        <script src="/OrmeauZen-Rasp/js/export.min.js"></script>
+        <link rel="stylesheet" href="export.css" type="text/css" media="all" />
+        <script src="/OrmeauZen-Rasp/js/light.js"></script>
+        <script src="/OrmeauZen-Rasp/js/dataloader.min.js"></script>
+        <script src="/OrmeauZen-Rasp/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="/OrmeauZen-Rasp/js/bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
+        <script src="/OrmeauZen-Rasp/js/bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
+        <script src="/OrmeauZen-Rasp/js/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+>>>>>>> bcdfcd230a5e8d239f5fb28676245adc4a7c0b95
     <div class="container">
         <div class="row">
             <div id="container1"></div>

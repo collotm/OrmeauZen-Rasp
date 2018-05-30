@@ -72,7 +72,11 @@
                         <p></p>
                       </th> 
                       <td class="valeur" align="center">
+<<<<<<< HEAD
                         <?php echo $val_mesure['temp']; ?>°C
+=======
+                        <?php echo $val_mesure['temp']; ?>
+>>>>>>> bcdfcd230a5e8d239f5fb28676245adc4a7c0b95
                       </td>
                       <th width="200"  height="40">
                         <p></p>
@@ -81,6 +85,11 @@
                   </table>
                 </div>
               </div>
+            </div>
+
+      <!-- Space -->
+            <div class="col-md-3" align="center">
+              <p><img src="images/bas.png" /></p>              
             </div>
 
     	<!-- Control only !!! -->
@@ -99,6 +108,7 @@
                       <td align="center"> 
                         <p>&nbsp;</p>
                       </td>
+<<<<<<< HEAD
                       <td colspan="3" align="center">
                         <input id="debit" name="debit" type="number" min="0" max="1000" value="<?php echo $val_mesure['debit']; ?>"/>
                       </td>
@@ -113,6 +123,10 @@
                       </td>
                       <td align="center">
                       	<p></p>
+=======
+                      <td align="center">
+                      	<p>L/h</p>
+>>>>>>> bcdfcd230a5e8d239f5fb28676245adc4a7c0b95
                       </td>
                       <td align="center">
                         <p>&nbsp;</p>
@@ -124,6 +138,7 @@
                         <p></p>
                       </th>
                       <td align="center">
+<<<<<<< HEAD
                         <form action="" method="POST">
         				          <button class="btn btn-lg btn-primary btn-block" type="submit" name="submit" href="supprMsg.php" onclick="return confirm('Voulez-vous vraiment changer le débit ?');">Ok</button>
                         </form>
@@ -142,6 +157,9 @@
                                 die('Erreur : '.$e->getMessage());
                         }
                         ?>
+=======
+        				        <button class="btn btn-lg btn-primary btn-block" type="submit" name="submit" href="supprMsg.php" onclick="return confirm('Voulez-vous vraiment changer le débit ?');">Ok</button>
+>>>>>>> bcdfcd230a5e8d239f5fb28676245adc4a7c0b95
                       </td>
                       <th width="200">
                         <p></p>
@@ -174,7 +192,11 @@
                         <p></p>
                       </th> 
                       <td class="valeur" align="center">
+<<<<<<< HEAD
                         <?php echo $val_mesure['debit']; ?> L/h
+=======
+                        <?php echo $val_mesure['deb']; ?>
+>>>>>>> bcdfcd230a5e8d239f5fb28676245adc4a7c0b95
                       </td>
                       <th width="200"  height="40">
                         <p></p>

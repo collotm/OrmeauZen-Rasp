@@ -114,7 +114,11 @@
                     </tr>
 
                     <tr align="center">
+<<<<<<< HEAD
                       <p align="center">Dernières valeurs relevées du</p>
+=======
+                      <p align="center">Dernières valeurs relevées</p>
+>>>>>>> bcdfcd230a5e8d239f5fb28676245adc4a7c0b95
                     </tr>
                   </table>
                 </div>
