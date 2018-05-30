@@ -8,7 +8,7 @@ if ( $link->connect_errno ) {
 // Fetch the data
 $query = "
 	SELECT * FROM mesure 
-	WHERE id_bassin =1 
+	WHERE id_bassin=$donnees[id] 
 	ORDER BY datetime";
 $result = $link->query( $query );
 

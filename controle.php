@@ -23,8 +23,35 @@
         <div class="container" align="center">
           <div class="row">
 
+          <?php
+            try
+            {
+              // On se connecte à MySQL
+              $conn = new PDO('mysql:host=localhost;dbname=ormeaux;charset=utf8', 'root', 'btsir123');
+            }
+            catch(Exception $e)
+            {
+              // En cas d'erreur, on affiche un message et on arrête tout
+                    die('Erreur : '.$e->getMessage());
+            }
+
+            // Si tout va bien, on peut continuer
+
+            // On récupère tout le contenu de la table mesure
+            if(isset($_GET["bassin"]))
+              $bassin=$_GET["bassin"];
+            else
+              $bassin="1";
+
+            // On affiche chaque entrée une à une
+            $query= "SELECT * FROM mesure WHERE id_bassin=$bassin ORDER BY datetime DESC LIMIT 1";
+            $mesure = $conn->query($query);
+            $val_mesure =  $mesure->fetch();
+            
+          ?>
+
     	<!-- Temp only !!! -->
-            <div class="col-md-3">
+            <div class="col-md-4">
               <div class="card mb-5 box-shadow">
                 <div class="card-body">
                   <table>
@@ -45,33 +72,22 @@
                         <p></p>
                       </th> 
                       <td class="valeur" align="center">
+                        <?php echo $val_mesure['temp']; ?>°C
                       </td>
                       <th width="200"  height="40">
                         <p></p>
                       </th> 
                     </tr>
-
-                    <tr>
-                      <th width="200">
-                        <p></p>
-                      </th>
-                      <td align="center">
-                        <p>°C</p>
-                      </td>
-                      <th width="200">
-                        <p></p>
-                      </th> 
-                    </tr>
-
                   </table>
                 </div>
               </div>
             </div>
 
     	<!-- Control only !!! -->
-            <div class="col-md-3" align="center">
+            <div class="col-md-4" align="center">
               <div class="card mb-5 box-shadow">
                 <div class="card-body">
+                  <form class="form-signin" action="includes/changdeb.inc.php" method="POST">
                   <table>
                     <tr>
                       <td colspan="3" align="center">
@@ -80,64 +96,14 @@
                     </tr>
 
                     <tr>
-                      <td  width="200" align="center">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">-</button>
-                      </td>
-                      <td class="valeur" align="center">
-                      </td>
-                      <td  width="200" align="center">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">+</button>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td align="center">
+                      <td align="center"> 
                         <p>&nbsp;</p>
                       </td>
-                      <td align="center">
-                      	<p>L/h</p>
-                      </td>
-                      <td align="center">
-                        <p>&nbsp;</p>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <th width="200">
-                        <p></p>
-                      </th>
-                      <td align="center">
-        				        <button class="btn btn-lg btn-primary btn-block" type="submit" name="submit" href="supprMsg.php" onclick="return confirm('Voulez-vous vraiment changer le débit ?');">Ok</button>
-                      </td>
-                      <th width="200">
-                        <p></p>
-                      </th>
-                    </tr>                    
-
-                  </table>
-                </div>
-              </div>
-            </div>
-
-    	<!-- Effective time only !!! -->
-            <div class="col-md-3" align="center">
-              <div class="card mb-5 box-shadow">
-                <div class="card-body">
-                  <table>
-                    <tr>
                       <td colspan="3" align="center">
-                        <p>Prise en compte dans : X secondes</p>
+                        <input id="debit" name="debit" type="number" min="0" max="1000" value="<?php echo $val_mesure['debit']; ?>"/>
                       </td>
-                    </tr>
-
-                    <tr>
-                      <td  width="200" align="center">
-                        <p></p>
-                      </td>
-                      <td class="valeur" align="center">
-                      </td>
-                      <td  width="200" align="center">
-                        <p></p>
+                      <td align="center">
+                        <p>L/h</p>
                       </td>
                     </tr>
 
@@ -158,7 +124,24 @@
                         <p></p>
                       </th>
                       <td align="center">
-        				<button class="btn btn-lg btn-primary btn-block" type="submit" name="submit">Ok</button>
+                        <form action="" method="POST">
+        				          <button class="btn btn-lg btn-primary btn-block" type="submit" name="submit" href="supprMsg.php" onclick="return confirm('Voulez-vous vraiment changer le débit ?');">Ok</button>
+                        </form>
+                        <?php
+                            if(isset($_POST["debit"]))
+                            $debit=$_POST["debit"]; // Récupération des variables
+                            
+                            try
+                        {
+                            // Insertion des variables
+                            $conn->exec('INSERT INTO controldeb(debitentre, id_bassin) VALUES("$debit", "$bassin")');
+                        }
+                            catch(Exception $e)
+                        {
+                          // En cas d'erreur, on affiche un message et on arrête tout
+                                die('Erreur : '.$e->getMessage());
+                        }
+                        ?>
                       </td>
                       <th width="200">
                         <p></p>
@@ -171,7 +154,7 @@
             </div>
 
     	<!-- Deb only !!! -->
-            <div class="col-md-3">
+            <div class="col-md-4">
               <div class="card mb-5 box-shadow">
                 <div class="card-body">
                   <table>
@@ -191,20 +174,9 @@
                         <p></p>
                       </th> 
                       <td class="valeur" align="center">
+                        <?php echo $val_mesure['debit']; ?> L/h
                       </td>
                       <th width="200"  height="40">
-                        <p></p>
-                      </th> 
-                    </tr>
-
-                    <tr>
-                      <th width="200">
-                        <p></p>
-                      </th>
-                      <td align="center">
-                        <p>L/h</p>
-                      </td>
-                      <th width="200">
                         <p></p>
                       </th> 
                     </tr>
@@ -213,7 +185,8 @@
                 </div>
               </div>
             </div>
-           </div> 
+           </div>
+          </div>
         </div>
 
     </main>

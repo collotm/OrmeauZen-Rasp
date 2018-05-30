@@ -1,22 +1,5 @@
 <!--https://www.amcharts.com/demos/area-with-time-based-data/-->
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Débit</title>
-        <!-- Resources -->
-        <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
-        <script src="serial.js"></script>
-        <script src="export.min.js"></script>
-        <link rel="stylesheet" href="export.css" type="text/css" media="all" />
-        <script src="light.js"></script>
-        <script src="dataloader.min.js"></script>
-        <script src="bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <script src="bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
-        <script src="bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
-        <script src="jquery-3.1.1.min.js"></script>
-</head>
-<body>
     <div class="container">
         <div class="row">
             <div id="container1"></div>
@@ -24,7 +7,7 @@
     </div>
     <!-- Styles -->
     <style>
-    #chartdiv {
+    .chartdiv {
         width   : 100%;
         height  : 500px;
     }                                               
@@ -34,7 +17,7 @@
     <script>
     var chartData = generateChartData();
 
-    var chart = AmCharts.makeChart("chartdiv", {
+    var chart1 = AmCharts.makeChart("chart1div", {
         "hideCredits": true,
         "type": "serial",
         "titles": [{
@@ -131,6 +114,4 @@
     </script>
 
     <!-- HTML -->
-    <div id="chartdiv"></div>
-</body>
-</html>
+    <div id="chart1div"></div>

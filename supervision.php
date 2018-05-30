@@ -25,17 +25,6 @@ else
 
     <!-- Custom styles for this template -->
     <link href="historique.css" rel="stylesheet">
-        <!-- Resources -->
-        <script src="chart/amcharts.js"></script>
-        <script src="chart/serial.js"></script>
-        <script src="chart/export.min.js"></script>
-        <link rel="stylesheet" href="chart/export.css" type="text/css" media="all" />
-        <script src="chart/light.js"></script>
-        <script src="chart/dataloader.min.js"></script>
-        <script src="chart/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <script src="chart/bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
-        <script src="chart/bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
-        <script src="chart/jquery-3.1.1.min.js"></script>
   </head>
 
   <body>
@@ -46,13 +35,13 @@ else
 
       <section class="starter-template">
         <div class="container">
-          <h1>Historique du Bassin n°<?php echo $bassin; ?> </h1>
+          <h1>Supervision des actions effectuées par les utilisateurs</h1>
           <p class="lead text-muted"></p>
           <p class="lead">Aujourd'hui nous sommes le <?php echo date('d/m/Y'); ?></p>
           <p class="lead">
             <?php
               if (isset($_SESSION['u_id'])) {
-                echo "Vous êtes bien connecté !";
+                echo "Vous êtes bien connecté en tant qu'admin !";
               }
               else {
                 echo "Vous n'êtes pas connecté à une session.";
@@ -62,26 +51,7 @@ else
         </div>
       </section>
 
-      <div class="album py-5 bg-light">
-        <?php require_once("controle.php"); ?>        
-        <p>&nbsp;</p>
-        <hr width="75%" align=center>
-        <p>&nbsp;</p>
-        <div id="chartdiv" class="chartdiv">
-          <?php require_once("chart/chart_temp.php"); ?>
-        </div>
-        <p>&nbsp;</p>
-        <hr width="75%" align=center>
-        <p>&nbsp;</p>                
-        <div id="chart1div" class="chartdiv">
-          <?php require_once("chart/chart_deb.php"); ?>
-        </div> 
-        <p>&nbsp;</p>
-        <hr width="75%" align=center>
-        <p>&nbsp;</p>
-        <div align="center">
-          <?php require_once("tableau.php"); ?>
-        </div>      
+      <div class="album py-5 bg-light">      
       </div>
 
 

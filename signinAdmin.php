@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="images/iconf.ico">
 
-    <title>Connexion à OrmeauZen</title>
+    <title>Connexion à l'espace administrateur</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap4/dist/css/bootstrap.css" rel="stylesheet">
@@ -22,7 +22,7 @@
     echo
     '<form class="form-signin" action="includes/loginAdmin.inc.php" method="POST">
       <img class="mb-4" src="images/frah.jpg" alt="">
-      <h1 class="h3 mb-3 font-weight-normal">Gestion des utilisateurs</h1>
+      <h1 class="h3 mb-3 font-weight-normal">Espace administrateur</h1>
         <label for="inputEmail" class="sr-only">Mail Adress</label>
         <input type="email" id="inputEmail" name="uid" class="form-control" placeholder="Adresse E-mail" required>
         <label for="inputPassword" class="sr-only">Password</label>

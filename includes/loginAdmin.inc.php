@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) {
 				$hashedPwdCheck = password_verify($pwd , $row['user_pwd']);
 				#fifth if
 				if ($hashedPwdCheck == false) {
-					header("Location: ../signin.php?login=error3");
+					header("Location: ../signinAdmin.php?login=error3");
 					exit();
 				} /*fifth else*/ elseif ($hashedPwdCheck == true) {
 					//Log in the user here
@@ -40,7 +40,7 @@ if (isset($_POST['submit'])) {
 					$_SESSION['u_last'] = $row['user_last'];
 					$_SESSION['u_email'] = $row['user_email'];
 					$_SESSION['u_uid'] = $row['user_uid'];
-					header("Location: ../signupAdmin.php?login=success");
+					header("Location: ../espaceAdmin.php?login=success");
 					exit();
 				}
 			}

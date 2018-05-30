@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="images/iconf.ico">
 
-    <title>Inscription réussie !</title>
+    <title>Espace administrateur</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap4/dist/css/bootstrap.css" rel="stylesheet">
@@ -20,10 +20,12 @@
   <body class="text-center">
     <form class="form-signin" action="includes/signup.inc.php" method="POST">
       <img class="mb-4" src="images/frah.jpg" alt="">
-      <h1 class="h3 mb-3 font-weight-normal">Inscription réussie</h1>
-      <a class="btn btn-lg btn-primary btn-block" href="espaceAdmin.php">Retour à l'espace administrateur</a>
+      <h1 class="h3 mb-3 font-weight-normal">Bienvenu dans l'espace admistrateur</h1>
+      <a class="btn btn-lg btn-primary btn-block" align="center" href="signupAdmin.php">Gestion des utilisateurs</a>
       <h1 class="h3 mb-3 font-weight-normal">ou</h1>
-      <a class="btn btn-lg btn-primary btn-block" href="signupAdmin.php">Nouvelle inscription</a>
+      <a class="btn btn-lg btn-primary btn-block" align="center" href="supervision.php">Actions effectuées</a>
+      <h1 class="h3 mb-3 font-weight-normal">ou</h1>
+      <a class="btn btn-lg btn-primary btn-block" align="center" href="visualisation.php">Retour à la page de visualisation</a>
       <p class="mt-5 mb-3 text-muted">&copy; OrmeauZen 2017-2018</p>
     </form>
   </body>

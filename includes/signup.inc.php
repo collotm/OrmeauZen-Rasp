@@ -14,21 +14,21 @@ if (isset($_POST['submit'])) {
 	//Check for empty field
 	#second if
 	if (empty($first) || empty($last) || empty($email) || empty($uid) || empty($pwd)) {
-		header("Location: ../signup.php?signup=empty");
+		header("Location: ../signupAdmin.php?signup=empty");
 		exit();
 	} /*second else*/ else{
 		//Check if input character are valid
 		# third if
 		if (!preg_match("/^[a-zA-Z]*$/" , $first) || !preg_match("/^[a-zA-Z]*$/" , $last) ) {
 			
-			header("Location: ../signup.php?signup=invalid");
+			header("Location: ../signupAdmin.php?signup=invalid");
 			exit();
 		} /*third else*/ else{
 			// Check if email is valid
 			#forth if
 			if (!filter_var( $email , FILTER_VALIDATE_EMAIL )) {
 				
-				header("Location: ../signup.php?signup=email");
+				header("Location: ../signupAdmin.php?signup=email");
 				exit();
 			} /*forth else*/ else {
 				$sql = "SELECT * FROM users WHERE user_uid='$uid'";
@@ -37,7 +37,7 @@ if (isset($_POST['submit'])) {
 
 				#fifth if
 				if ($resultCheck > 0) {
-					header("Location: ../signup.php?signup=usertaken");
+					header("Location: ../signupAdmin.php?signup=usertaken");
 					exit();
 				} /*forth else*/ else {
 					//Hashing the password
@@ -53,6 +53,6 @@ if (isset($_POST['submit'])) {
 	}
 
 } /*first else*/ else {
-	header("Location: ../signup.php");
+	header("Location: ../signupAdmin.php");
 	exit();
 }
