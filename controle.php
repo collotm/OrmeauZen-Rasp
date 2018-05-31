@@ -1,3 +1,44 @@
+<?php
+  try
+  {
+    // On se connecte à MySQL
+    $conn = new PDO('mysql:host=localhost;dbname=ormeaux;charset=utf8', 'root', 'btsir123');
+  }
+  
+  catch(Exception $e)
+  {
+    // En cas d'erreur, on affiche un message et on arrête tout
+    die('Erreur : '.$e->getMessage());
+  }
+    // On récupère tout le contenu de la table mesure
+    if(isset($_GET["bassin"]))
+    $bassin=$_GET["bassin"];
+    // On affiche chaque entrée une à une
+    $query= "SELECT * FROM mesure WHERE id_bassin=$bassin ORDER BY datetime DESC LIMIT 1";
+    $mesure = $conn->query($query);
+    $val_mesure =  $mesure->fetch();   
+?>
+
+<?php
+  if(isset($_POST["debit"]))
+    {
+      $debit=$_POST["debit"]; // Récupération des variables
+                            
+      try
+      {
+        // Insertion des variables
+        $query="UPDATE controldeb SET debitentre=$debit WHERE id_bassin=$bassin";
+        $conn->exec($query);
+      }
+                                
+      catch(Exception $e)
+      {
+        // En cas d'erreur, on affiche un message et on arrête tout
+        die('Erreur : '.$e->getMessage());
+      }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,34 +63,6 @@
 
         <div class="container" align="center">
           <div class="row">
-
-          <?php
-            try
-            {
-              // On se connecte à MySQL
-              $conn = new PDO('mysql:host=localhost;dbname=ormeaux;charset=utf8', 'root', 'btsir123');
-            }
-            catch(Exception $e)
-            {
-              // En cas d'erreur, on affiche un message et on arrête tout
-                    die('Erreur : '.$e->getMessage());
-            }
-
-            // Si tout va bien, on peut continuer
-
-            // On récupère tout le contenu de la table mesure
-            if(isset($_GET["bassin"]))
-              $bassin=$_GET["bassin"];
-            else
-              $bassin="1";
-
-            // On affiche chaque entrée une à une
-            $query= "SELECT * FROM mesure WHERE id_bassin=$bassin ORDER BY datetime DESC LIMIT 1";
-            $mesure = $conn->query($query);
-            $val_mesure =  $mesure->fetch();
-            
-          ?>
-
     	<!-- Temp only !!! -->
             <div class="col-md-4">
               <div class="card mb-5 box-shadow">
@@ -72,11 +85,7 @@
                         <p></p>
                       </th> 
                       <td class="valeur" align="center">
-<<<<<<< HEAD
                         <?php echo $val_mesure['temp']; ?>°C
-=======
-                        <?php echo $val_mesure['temp']; ?>
->>>>>>> bcdfcd230a5e8d239f5fb28676245adc4a7c0b95
                       </td>
                       <th width="200"  height="40">
                         <p></p>
@@ -87,16 +96,10 @@
               </div>
             </div>
 
-      <!-- Space -->
-            <div class="col-md-3" align="center">
-              <p><img src="images/bas.png" /></p>              
-            </div>
-
     	<!-- Control only !!! -->
             <div class="col-md-4" align="center">
               <div class="card mb-5 box-shadow">
                 <div class="card-body">
-                  <form class="form-signin" action="includes/changdeb.inc.php" method="POST">
                   <table>
                     <tr>
                       <td colspan="3" align="center">
@@ -108,8 +111,8 @@
                       <td align="center"> 
                         <p>&nbsp;</p>
                       </td>
-<<<<<<< HEAD
                       <td colspan="3" align="center">
+                        <form action="" method="POST">
                         <input id="debit" name="debit" type="number" min="0" max="1000" value="<?php echo $val_mesure['debit']; ?>"/>
                       </td>
                       <td align="center">
@@ -123,10 +126,6 @@
                       </td>
                       <td align="center">
                       	<p></p>
-=======
-                      <td align="center">
-                      	<p>L/h</p>
->>>>>>> bcdfcd230a5e8d239f5fb28676245adc4a7c0b95
                       </td>
                       <td align="center">
                         <p>&nbsp;</p>
@@ -138,28 +137,8 @@
                         <p></p>
                       </th>
                       <td align="center">
-<<<<<<< HEAD
-                        <form action="" method="POST">
-        				          <button class="btn btn-lg btn-primary btn-block" type="submit" name="submit" href="supprMsg.php" onclick="return confirm('Voulez-vous vraiment changer le débit ?');">Ok</button>
+        				          <button class="btn btn-lg btn-primary btn-block" type="submit" name="submit" onclick="return confirm('Voulez-vous vraiment changer le débit ?');">Ok</button>
                         </form>
-                        <?php
-                            if(isset($_POST["debit"]))
-                            $debit=$_POST["debit"]; // Récupération des variables
-                            
-                            try
-                        {
-                            // Insertion des variables
-                            $conn->exec('INSERT INTO controldeb(debitentre, id_bassin) VALUES("$debit", "$bassin")');
-                        }
-                            catch(Exception $e)
-                        {
-                          // En cas d'erreur, on affiche un message et on arrête tout
-                                die('Erreur : '.$e->getMessage());
-                        }
-                        ?>
-=======
-        				        <button class="btn btn-lg btn-primary btn-block" type="submit" name="submit" href="supprMsg.php" onclick="return confirm('Voulez-vous vraiment changer le débit ?');">Ok</button>
->>>>>>> bcdfcd230a5e8d239f5fb28676245adc4a7c0b95
                       </td>
                       <th width="200">
                         <p></p>
@@ -192,11 +171,7 @@
                         <p></p>
                       </th> 
                       <td class="valeur" align="center">
-<<<<<<< HEAD
                         <?php echo $val_mesure['debit']; ?> L/h
-=======
-                        <?php echo $val_mesure['deb']; ?>
->>>>>>> bcdfcd230a5e8d239f5fb28676245adc4a7c0b95
                       </td>
                       <th width="200"  height="40">
                         <p></p>

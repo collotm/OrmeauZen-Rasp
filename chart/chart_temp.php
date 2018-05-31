@@ -1,25 +1,23 @@
+<!--31.05.2018-->
 <!--https://www.amcharts.com/demos/area-with-time-based-data/-->
 
-<<<<<<< HEAD
-=======
 <!DOCTYPE html>
 <html>
 <head>
     <title>Temperature</title>
         <!-- Resources -->
-        <script src="/OrmeauZen-Rasp/js/amcharts.js"></script>
-        <script src="/OrmeauZen-Rasp/js/serial.js"></script>
-        <script src="/OrmeauZen-Rasp/js/export.min.js"></script>
-        <link rel="stylesheet" href="export.css" type="text/css" media="all" />
-        <script src="/OrmeauZen-Rasp/js/light.js"></script>
-        <script src="/OrmeauZen-Rasp/js/dataloader.min.js"></script>
-        <script src="/OrmeauZen-Rasp/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <script src="/OrmeauZen-Rasp/js/bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
-        <script src="/OrmeauZen-Rasp/js/bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
-        <script src="/OrmeauZen-Rasp/js/jquery-3.1.1.min.js"></script>
+        <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+        <script src="https://www.amcharts.com/lib/3/serial.js"></script>
+        <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+        <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+        <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+        <script src="dataloader.min.js"></script>
+        <script src="bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
+        <script src="bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
+        <script src="jquery-3.1.1.min.js"></script>
 </head>
 <body>
->>>>>>> bcdfcd230a5e8d239f5fb28676245adc4a7c0b95
     <div class="container">
         <div class="row">
             <div id="container1"></div>
@@ -27,9 +25,9 @@
     </div>
     <!-- Styles -->
     <style>
-    .chartdiv {
+    #chartdiv {
         width   : 100%;
-        height  : 500px;
+        height  : 1000px;
     }                                               
     </style>
 
@@ -135,3 +133,5 @@
 
     <!-- HTML -->
     <div id="chartdiv"></div>
+</body>
+</html>

@@ -1,35 +1,43 @@
 <?php
-// Connect to MySQL
-$link = new mysqli( 'localhost', 'root', 'btsir123', 'ormeaux' );
-if ( $link->connect_errno ) {
-  die( "Failed to connect to MySQL: (" . $link->connect_errno . ") " . $link->connect_error );
-}
+  try
+  {
+    // On se connecte à MySQL
+    $conn = new mysqli( 'localhost', 'root', 'btsir123', 'ormeaux' );
+  }
+  
+  catch(Exception $e)
+  {
+    // En cas d'erreur, on affiche un message et on arrête tout
+    die('Erreur : '.$e->getMessage());
+  }
+    // On récupère tout le contenu de la table mesure
+    if(isset($_GET["bassin"]))
+    $bassin=$_GET["bassin"];
 
-// Fetch the data
-$query = "
-	SELECT * FROM mesure 
-	WHERE id_bassin=$donnees[id] 
-	ORDER BY datetime";
-$result = $link->query( $query );
+	//echo $bassin;
 
-// All good?
-if ( !$result ) {
-  // Nope
-  $message  = 'Invalid query: ' . $link->error . "n";
-  $message .= 'Whole query: ' . $query;
-  die( $message );
-}
+	// Fetch the data
+	$query = "SELECT * FROM mesure WHERE id_bassin = 1 ORDER BY datetime";
+	$result = $conn->query( $query ); 
 
-// Set proper HTTP response headers
-header( 'Content-Type: application/json' );
+	// All good?
+	if ( !$result ) {
+	  // Nope
+	  $message  = 'Invalid query: ' . $conn->error . "n";
+	  $message .= 'Whole query: ' . $query;
+	  die( $message );
+	}
 
-// Print out rows
-$data = array();
-while ( $row = $result->fetch_assoc() ) {
-  $data[] = $row;
-}
-echo json_encode( $data );
+	// Set proper HTTP response headers
+	header( 'Content-Type: application/json' );
 
-// Close the connection
-mysqli_close($link);
+	// Print out rows
+	$data = array();
+	while ( $row = $result->fetch_assoc() ) {
+	  $data[] = $row;
+	}
+	echo json_encode( $data );
+
+	// Close the connection
+	mysqli_close($conn);
 ?>

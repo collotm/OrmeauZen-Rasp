@@ -1,17 +1,16 @@
+<!--31.05.2018-->
 <!--https://www.amcharts.com/demos/area-with-time-based-data/-->
 
-<<<<<<< HEAD
-=======
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Débit</title>
+    <title>Debit</title>
         <!-- Resources -->
-        <script src="amcharts.js"></script>
-        <script src="serial.js"></script>
-        <script src="export.min.js"></script>
-        <link rel="stylesheet" href="export.css" type="text/css" media="all" />
-        <script src="light.js"></script>
+        <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+        <script src="https://www.amcharts.com/lib/3/serial.js"></script>
+        <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+        <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+        <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
         <script src="dataloader.min.js"></script>
         <script src="bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
@@ -19,7 +18,6 @@
         <script src="jquery-3.1.1.min.js"></script>
 </head>
 <body>
->>>>>>> bcdfcd230a5e8d239f5fb28676245adc4a7c0b95
     <div class="container">
         <div class="row">
             <div id="container1"></div>
@@ -27,9 +25,9 @@
     </div>
     <!-- Styles -->
     <style>
-    .chartdiv {
+    #chart1div {
         width   : 100%;
-        height  : 500px;
+        height  : 1000px;
     }                                               
     </style>
 
@@ -37,7 +35,7 @@
     <script>
     var chartData = generateChartData();
 
-    var chart1 = AmCharts.makeChart("chart1div", {
+    var chart = AmCharts.makeChart("chart1div", {
         "hideCredits": true,
         "type": "serial",
         "titles": [{
@@ -93,7 +91,7 @@
         },
         "valueAxes": [{
         "position": "left",
-        "title": "L/min"
+        "title": "L/h"
         }]
     });
 
@@ -135,3 +133,5 @@
 
     <!-- HTML -->
     <div id="chart1div"></div>
+</body>
+</html>
