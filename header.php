@@ -19,21 +19,21 @@
                 <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                   <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                      <a class="nav-link" href="visualisation.php">Visualisation</a>
+                      <a class="nav-link" href="/OrmeauZen-Rasp-master-I/visualisation.php">Visualisation</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="historique.php">Historique des bassins</a>
+                      <a class="nav-link" href="/OrmeauZen-Rasp-master-I/historique.php">Historique des bassins</a>
                     </li>
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gestion</a>
                       <div class="dropdown-menu" aria-labelledby="dropdown01">
-                        <a class="dropdown-item" href="#">Ajouter un bassin</a>
+                        <a class="dropdown-item" href="/OrmeauZen-Rasp-master-I/ajoutBassin.php">Ajouter un bassin</a>
                       </div>
                     </li>
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin</a>
                       <div class="dropdown-menu" aria-labelledby="dropdown01">
-                        <a class="dropdown-item" href="signinAdmin.php">Espace Administrateur</a>
+                        <a class="dropdown-item" href="/OrmeauZen-Rasp-master-I/signinAdmin.php">Espace Administrateur</a>
                       </div>
                     </li>                   
                     <li class="nav-item dropdown">
@@ -43,18 +43,11 @@
                         <a class="dropdown-item" href="#">Contact</a>
                       </div>
                     </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Connecté en tant que<?php '.$_SESSION["u_id"].'?></a>
-                      <div class="dropdown-menu" aria-labelledby="dropdown01">
-                        <?php
-                            echo '<form action="includes/logout.inc.php" method="POST">
-                                  <a class="dropdown-item" href="#">Déconnexion</a>
-                                  </form>';
-                        ?>
-                      </div>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/OrmeauZen-Rasp-master-I/logout.php">Déconnexion</a>
                     </li>
                   </ul>
-                  <form class="form-inline my-2 my-lg-0" method="GET" action="historique.php">
+                  <form class="form-inline my-2 my-lg-0" method="GET" action="/OrmeauZen-Rasp-master-I/historique.php">
                     <input class="form-control mr-sm-2" type="text" placeholder="N° de bassin" aria-label="Search" name="bassin">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Chercher</button>
                   </form>
@@ -66,13 +59,13 @@
       </div>
       <div class="navbar navbar-dark bg-dark box-shadow">
         <div class="container d-flex justify-content-between">
-          <a href="visualisation.php" class="navbar-brand d-flex align-items-center">
+          <a href="/OrmeauZen-Rasp-master-I/visualisation.php" class="navbar-brand d-flex align-items-center">
 
             <strong>OrmeauZen</strong>
           </a>
 
           <a>
-          <img src="images/fra.jpg">
+          <img src="/OrmeauZen-Rasp-master-I/images/fra.jpg">
           </a>
 
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">

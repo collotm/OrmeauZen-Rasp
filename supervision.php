@@ -16,20 +16,20 @@ else
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="images/iconf.ico">
+    <link rel="icon" href="/OrmeauZen-Rasp-master-I/images/iconf.ico">
 
     <title>Historique du bassin n°<?php echo $bassin; ?></title>
 
     <!-- Bootstrap core CSS -->
-    <link href="bootstrap4/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="/OrmeauZen-Rasp-master-I/bootstrap4/dist/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="historique.css" rel="stylesheet">
+    <link href="/OrmeauZen-Rasp-master-I/historique.css" rel="stylesheet">
   </head>
 
   <body>
 
-<?php require_once("header.php"); ?>
+<?php require_once("/OrmeauZen-Rasp-master-I/header.php"); ?>
 
     <main role="main">
 
@@ -57,15 +57,15 @@ else
 
     </main>
 
-<?php require_once("footer.php"); ?>
+<?php require_once("/OrmeauZen-Rasp-master-I/footer.php"); ?>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="bootstrap4/dist/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="bootstrap4/dist/js/vendor/popper.min.js"></script>
-    <script src="bootstrap4/dist/js/bootstrap.min.js"></script>
-    <script src="bootstrap4/dist/js/vendor/holder.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/OrmeauZen-Rasp-master-I/bootstrap4/dist/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="/OrmeauZen-Rasp-master-I/bootstrap4/dist/js/vendor/popper.min.js"></script>
+    <script src="/OrmeauZen-Rasp-master-I/bootstrap4/dist/js/bootstrap.min.js"></script>
+    <script src="/OrmeauZen-Rasp-master-I/bootstrap4/dist/js/vendor/holder.min.js"></script>
   </body>
 </html>

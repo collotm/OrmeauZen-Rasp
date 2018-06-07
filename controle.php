@@ -46,15 +46,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="images/iconf.ico">
+    <link rel="icon" href="/OrmeauZen-Rasp-master-I/images/iconf.ico">
 
     <title>controle</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="bootstrap4/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="/OrmeauZen-Rasp-master-I/bootstrap4/dist/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="visualisation.css" rel="stylesheet">
+    <link href="/OrmeauZen-Rasp-master-I/visualisation.css" rel="stylesheet">
   </head>
 
   <body>
@@ -73,7 +73,7 @@
                         <p></p>
                       </th>
                       <th>
-                        <p class="temp"><img src="images/temp.png" /></p>
+                        <p class="temp"><img src="/OrmeauZen-Rasp-master-I/images/temp.png" /></p>
                       </th>
                       <th width="200">
                         <p></p>
@@ -137,6 +137,7 @@
                         <p></p>
                       </th>
                       <td align="center">
+                          <!--<input type="button" name="open" value="open" onClick=exect("python /home/pi/prog_modbus/changement_debit.py 1 54")>-->
         				          <button class="btn btn-lg btn-primary btn-block" type="submit" name="submit" onclick="return confirm('Voulez-vous vraiment changer le débit ?');">Ok</button>
                         </form>
                       </td>
@@ -159,7 +160,7 @@
                       <th width="200">
                         <p></p>
                       </th>
-                        <p class="deb"><img src="images/deb.png" /></p>
+                        <p class="deb"><img src="/OrmeauZen-Rasp-master-I/images/deb.png" /></p>
                       </th>
                       <th width="200">
                         <p></p>
@@ -192,9 +193,9 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="bootstrap4/dist/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="bootstrap4/dist/js/vendor/popper.min.js"></script>
-    <script src="bootstrap4/dist/js/bootstrap.min.js"></script>
-    <script src="bootstrap4/dist/js/vendor/holder.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/OrmeauZen-Rasp-master-I/bootstrap4/dist/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="/OrmeauZen-Rasp-master-I/bootstrap4/dist/js/vendor/popper.min.js"></script>
+    <script src="/OrmeauZen-Rasp-master-I/bootstrap4/dist/js/bootstrap.min.js"></script>
+    <script src="/OrmeauZen-Rasp-master-I/bootstrap4/dist/js/vendor/holder.min.js"></script>
   </body>
 </html>

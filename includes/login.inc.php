@@ -14,7 +14,7 @@ if (isset($_POST['submit'])) {
 	//Check if this input are empty
 	#second if
 	if (empty($uid) || empty($pwd)) {
-		header("Location: ../signin.php?login=empty");
+		header("Location: ../index.php?login=empty");
 		exit();
 	}/*second else*/ else {
 		$sql = "SELECT * FROM users WHERE user_uid='$uid' OR user_email='$uid'";
@@ -22,7 +22,7 @@ if (isset($_POST['submit'])) {
 		$resultCheck = mysqli_num_rows($result);
 		#third if
 		if ($resultCheck < 1) {
-			header("Location: ../signin.php?login=error2");
+			header("Location: ../index.php?login=error2");
 			exit();
 		}/*third else*/ else {
 			#forth if
@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) {
 				$hashedPwdCheck = password_verify($pwd , $row['user_pwd']);
 				#fifth if
 				if ($hashedPwdCheck == false) {
-					header("Location: ../signin.php?login=error3");
+					header("Location: ../index.php?login=error3");
 					exit();
 				} /*fifth else*/ elseif ($hashedPwdCheck == true) {
 					//Log in the user here
@@ -47,6 +47,6 @@ if (isset($_POST['submit'])) {
 		}
 	}
 }/*first else*/ else {
-	header("Location: ../signin.php?login=error1");
+	header("Location: ../index.php?login=error1");
 	exit();
 }

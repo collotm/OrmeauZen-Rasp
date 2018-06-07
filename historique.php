@@ -1,8 +1,3 @@
-<?php
-  session_start();
-?>
-
-
 <!DOCTYPE html>
 <?php
 if(isset($_GET["bassin"]))
@@ -16,26 +11,26 @@ else
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="images/iconf.ico">
+    <link rel="icon" href="/OrmeauZen-Rasp-master-I/images/iconf.ico">
 
     <title>Historique du bassin n°<?php echo $bassin; ?></title>
 
     <!-- Bootstrap core CSS -->
-    <link href="bootstrap4/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="/OrmeauZen-Rasp-master/bootstrap4/dist/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="historique.css" rel="stylesheet">
+    <link href="/OrmeauZen-Rasp-master/historique.css" rel="stylesheet">
         <!-- Resources -->
-        <script src="chart/amcharts.js"></script>
-        <script src="chart/serial.js"></script>
-        <script src="chart/export.min.js"></script>
-        <link rel="stylesheet" href="chart/export.css" type="text/css" media="all" />
-        <script src="chart/light.js"></script>
-        <script src="chart/dataloader.min.js"></script>
-        <script src="chart/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <script src="chart/bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
-        <script src="chart/bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
-        <script src="chart/jquery-3.1.1.min.js"></script>
+        <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+        <script src="https://www.amcharts.com/lib/3/serial.js"></script>
+        <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+        <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+        <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+        <script src="/OrmeauZen-Rasp-master-I/chart/dataloader.min.js"></script>
+        <script src="/OrmeauZen-Rasp-master-I/chart/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="/OrmeauZen-Rasp-master-I/chart/bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
+        <script src="/OrmeauZen-Rasp-master-I/chart/bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
+        <script src="/OrmeauZen-Rasp-master-I/chart/jquery-3.1.1.min.js"></script>
   </head>
 
   <body>
@@ -96,8 +91,8 @@ else
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="bootstrap4/dist/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="bootstrap4/dist/js/vendor/popper.min.js"></script>
-    <script src="bootstrap4/dist/js/bootstrap.min.js"></script>
-    <script src="bootstrap4/dist/js/vendor/holder.min.js"></script>
+    <script src="/OrmeauZen-Rasp-master/bootstrap4/dist/js/vendor/popper.min.js"></script>
+    <script src="/OrmeauZen-Rasp-master/bootstrap4/dist/js/bootstrap.min.js"></script>
+    <script src="/OrmeauZen-Rasp-master/bootstrap4/dist/js/vendor/holder.min.js"></script>
   </body>
 </html>

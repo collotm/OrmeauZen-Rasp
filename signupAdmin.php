@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="images/iconf.ico">
+    <link rel="icon" href="/OrmeauZen-Rasp-master-I/images/iconf.ico">
 
     <title>Inscription à OrmeauZen</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="bootstrap4/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="/OrmeauZen-Rasp-master-I/bootstrap4/dist/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="signin.css" rel="stylesheet">
+    <link href="/OrmeauZen-Rasp-master-I/signin.css" rel="stylesheet">
   </head>
 
   <body class="text-center">
-    <form class="form-signin" action="includes/signup.inc.php" method="POST">
-      <img class="mb-4" src="images/frah.jpg" alt="">
+    <form class="form-signin" action="/OrmeauZen-Rasp-master-I/includes/signup.inc.php" method="POST">
+      <img class="mb-4" src="/OrmeauZen-Rasp-master-I/images/frah.jpg" alt="">
       <h1 class="h3 mb-3 font-weight-normal">Gestion des utilisateurs OrmeauZen v2.0</h1>
       <input type="text" id="inputEmail" name="first" class="form-control" placeholder="Nom" required autofocus>
       <input type="text" id="inputPassword" name="last" class="form-control" placeholder="Prénom" required>
