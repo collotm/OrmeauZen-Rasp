@@ -6,16 +6,16 @@
 <head>
     <title>Debit</title>
         <!-- Resources -->
-        <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
-        <script src="https://www.amcharts.com/lib/3/serial.js"></script>
-        <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
-        <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
-        <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
-        <script src="dataloader.min.js"></script>
-        <script src="bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <script src="bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
-        <script src="bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
-        <script src="jquery-3.1.1.min.js"></script>
+        <script src="/OrmeauZen-Rasp-master-I/chart/amcharts.js"></script>
+        <script src="/OrmeauZen-Rasp-master-I/chart/serial.js"></script>
+        <script src="/OrmeauZen-Rasp-master-I/chart/export.min.js"></script>
+        <link rel="stylesheet" href="/OrmeauZen-Rasp-master-I/chart/export.css" type="text/css" media="all" />
+        <script src="/OrmeauZen-Rasp-master-I/chart/light.js"></script>
+        <script src="/OrmeauZen-Rasp-master-I/chart/dataloader.min.js"></script>
+        <script src="/OrmeauZen-Rasp-master-I/chart/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="/OrmeauZen-Rasp-master-I/chart/bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
+        <script src="/OrmeauZen-Rasp-master-I/chart/bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
+        <script src="/OrmeauZen-Rasp-master-I/chart/jquery-3.1.1.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -27,7 +27,7 @@
     <style>
     #chart1div {
         width   : 100%;
-        height  : 1000px;
+        height  : 500px;
     }                                               
     </style>
 
@@ -45,7 +45,7 @@
             "bold": false
           }], 
         "dataLoader": {
-          "url": "data.php"
+          "url": "/OrmeauZen-Rasp-master-I/chart/data.php?bassin=<?php echo $bassin ?>"
         },
         "graphs": [{
             "id": "g1",

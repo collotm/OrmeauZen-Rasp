@@ -14,10 +14,12 @@
     if(isset($_GET["bassin"]))
     $bassin=$_GET["bassin"];
 
+
 	//echo $bassin;
 
 	// Fetch the data
-	$query = "SELECT * FROM mesure WHERE id_bassin = 1 ORDER BY datetime";
+
+	$query = "SELECT * FROM mesure WHERE id_bassin = '{$bassin}' ORDER BY datetime";
 	$result = $conn->query( $query ); 
 
 	// All good?
